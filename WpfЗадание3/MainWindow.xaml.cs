@@ -121,5 +121,20 @@ namespace WpfЗадание3
                 textBox.Foreground = Brushes.Red;
             }
         }
+
+        private void CloseExecuted(object sender, ExecutedRoutedEventArgs e)
+        {
+            Application.Current.Shutdown();
+        }
+
+        private void OpenExecuted(object sender, ExecutedRoutedEventArgs e)
+        {
+            MessageBox.Show("Документ открыт");
+        }
+
+        private void SaveExecuted(object sender, ExecutedRoutedEventArgs e)
+        {
+            MessageBox.Show("Документ сохранен");
+        }
     }
 }
